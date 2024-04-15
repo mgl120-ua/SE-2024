@@ -15,69 +15,73 @@
 	
 	<build>
 		<finalName>GrainBankApp</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.4.7.v20170914</version>
-				<configuration>
-					<contextPath>/</contextPath>
-					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<httpConnector>
-						<port>9091</port>
-					</httpConnector>
-				</configuration>
-			</plugin>
-		</plugins>
+		
+	  <plugins>
+		<plugin>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-maven-plugin</artifactId>
+		  <version>9.4.7.v20170914</version>
+		  <configuration>
+		  <contextPath>/</contextPath>
+		  <scanIntervalSeconds>10</scanIntervalSeconds>
+		  <httpConnector>
+		  <port>9091</port>
+		  </httpConnector>
+		  </configuration>
+		</plugin>
+	  </plugins>
 	</build>
-
-	<properties>
-  		<maven.compiler.target>1.8</maven.compiler.target>
-  		<maven.compiler.source>1.8</maven.compiler.source>
-	</properties>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>freemarker</groupId>
 			<artifactId>freemarker</artifactId>
-			<version>2.3.1</version>
+			<version>(,2.3.1]</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
+			<version>[2.5]</version>
 			<scope>provided</scope>
 		</dependency>
+		
 		<dependency>
- 			<groupId>junit</groupId>
- 			<artifactId>junit</artifactId>
- 			<version>4.12</version>
- 			<scope>test</scope>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	
 	<reporting>
- 		<plugins>
- 			<plugin>
- 				<groupId>org.apache.maven.plugins</groupId>
- 				<artifactId>maven-site-plugin</artifactId>
- 				<version>3.3</version>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.3</version>
 			</plugin>
 			<plugin>
- 				<groupId>org.apache.maven.plugins</groupId>
- 				<artifactId>maven-project-info-reports-plugin</artifactId>
- 				<version>2.7</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.7</version>
 			</plugin>
- 			<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>3.0.0-M5</version>
- 			</plugin>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.1.1</version>
 			</plugin>
- 		</plugins>
+		</plugins>
 	</reporting>
+
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+
 </project>

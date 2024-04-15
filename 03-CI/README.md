@@ -1,2 +1,2 @@
-Marta Grimaldos López 
-ER1556
+# grain-bank-2024
+![example workflow](https://github.com/wcomplak/grain-bank-2024/actions/workflows/ci.yml/badge.svg)
