@@ -15,6 +15,7 @@ class CalculatorTest {
 
     @Test
     public void testAdd() {
+        setUp();
         int result1 = calculator.add(2, 5);
         assertEquals(7, result1);
         
@@ -24,6 +25,7 @@ class CalculatorTest {
 
     @Test
     public void testMultiply() {
+        setUp();
         int result1 = calculator.multiply(3, 4);
         assertEquals(12, result1);
 
@@ -33,6 +35,7 @@ class CalculatorTest {
 
     @Test
     public void testAddPositiveNumbers() {
+        setUp();
         assertThrows(IllegalArgumentException.class, () -> {calculator.addPositiveNumbers(-12, 5);});
     }
 }
