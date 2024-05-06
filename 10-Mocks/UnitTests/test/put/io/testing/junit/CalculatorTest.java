@@ -1,11 +1,17 @@
 package put.io.testing.junit;
 
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
-    Calculator calculator = new Calculator();
+    private Calculator calculator;
+
+    @Before
+    public void setUp() {
+        calculator = new Calculator();
+    }
 
     @Test
     public void testAdd() {
