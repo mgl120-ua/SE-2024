@@ -24,4 +24,9 @@ class CalculatorTest {
         int result2 = calculator.multiply(-2, 5);
         assertEquals(-10, result2);
     }
+
+    @Test
+    public void testAddPositiveNumbers() {
+        assertThrows(IllegalArgumentException.class, () -> {calculator.addPositiveNumbers(-12, 5);});
+    }
 }
