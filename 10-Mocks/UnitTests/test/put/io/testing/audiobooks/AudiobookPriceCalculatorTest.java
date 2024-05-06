@@ -13,6 +13,13 @@ class AudiobookPriceCalculatorTest {
     public void setUp() {
         calculator = new AudiobookPriceCalculator();
     }
+    @Test
+    public void testCalculate_notSubscriber() {
+        setUp();
+        Customer subscriber = new Customer("Marta", Customer.LoyaltyLevel.STANDARD, false);
+        Audiobook audiobook = new Audiobook("The Little Prince" , 10.0);
+        assertEquals(10.0, calculator.calculate(subscriber, audiobook), 0.01);
+    }
 
     @Test
     public void testCalculate_Subscriber() {
