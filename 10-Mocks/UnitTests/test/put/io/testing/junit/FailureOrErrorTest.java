@@ -14,4 +14,13 @@ public class FailureOrErrorTest {
     public void test2() {
         throw new RuntimeException("Arbitrary exception thrown");
     }
+
+    @Test
+    public void test3() {
+        try {
+            assertTrue(false);
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+    }
 }
